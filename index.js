@@ -1,35 +1,52 @@
 function dwarfRollCall(dwarves) {
-  var newStr = ('')
+  var newStr = ('');
   for (let i = 0; i < dwarves.length; i ++){
-    newStr += (`${i + 1}. ${dwarves[i]} `)
+    if (i > dwarves.length / 2){
+    newStr += (`${i + 1}. ${dwarves[i]} `);
   }
-  return newStr
+  }
+  return newStr;
 }
 
 function summonCaptainPlanet(planeteerCalls){
-  var newArr = []
+  var newArr = [];
   for (let i = 0; i < planeteerCalls.length; i ++){
-    newArr.push(`${planeteerCalls[i].toUpperCase()}!`)
+    newArr.push(`${planeteerCalls[i].toUpperCase()}!`);
   }
-  return newArr
+  return newArr;
 }
 
 function longPlaneteerCalls(words) {
   for (let i = 0; i < words.length; i ++){
   if (words[i].length > 4){
-    return true
+    return true;
   }
 }
-   return false
+   return false;
 }
 
 function findTheCheese (foods) {
-  var cheese = ["cheddar", "gouda", "camembert"]
+  var cheese = ["cheddar", "gouda", "camembert"];
   for (let i = 0; i < foods.length; i ++){
     if (cheese.includes(foods[i]) === true){
-      return foods[i]
+      return foods[i];
     }
   }
-     return 'no cheese!'
+     return 'no cheese!';
     }
+
+function wordsWithB(words){
+  newArr = []
+ for (let i = 0; i < words.length; i ++){
+  if (words[i].startsWith('b') === true){
+   newArr.push(words[i])
+  }
+}  
+return newArr
+}
+
+
+
+
+
 
